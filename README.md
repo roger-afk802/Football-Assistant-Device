@@ -42,4 +42,58 @@ G --> I["RGB LED"]
 G --> J["Servo Motor"]
 G --> K["DFPlayer Mini and Speaker"]
 ```
+## Hardware
 
+The following hardware components are used in the Football Assistant Device.
+
+| Component | Model | Purpose |
+|-----------|-------|---------|
+| ESP32 | ESP32-WROOM-32 | Main microcontroller for communication and hardware control |
+| LCD Display | 1602 LCD with I2C | Displays match information and AI recommendations |
+| Camera | USB Camera | Captures the user's face for attention detection |
+| RGB LED | Common Anode RGB LED | Indicates system status through different colors |
+| Servo Motor | SG90 Micro Servo | Provides physical movement as a notification |
+| Audio Module | DFPlayer Mini | Plays notification sounds and football music |
+| Speaker | 8Ω Speaker | Outputs audio notifications |
+| Volume Knob | Rotary Potentiometer | Adjusts the speaker volume |
+## Software
+
+The Football Assistant Device is built using the following software and libraries.
+
+| Software / Library | Purpose |
+|--------------------|---------|
+| Python | Main application that coordinates the entire system |
+| OpenCV | Captures and processes camera images |
+| MediaPipe | Detects facial landmarks and estimates user attention |
+| Tkinter | Provides the graphical user interface for user input |
+| OpenAI GPT API | Generates intelligent viewing recommendations |
+| Football API | Retrieves real-time football match data and events |
+| Requests | Sends HTTP requests to the ESP32 |
+| Arduino IDE | Develops and uploads firmware to the ESP32 |
+### Software Workflow
+
+```mermaid
+flowchart TD
+
+Start([Start])
+
+Start --> GUI["User GUI"]
+
+GUI --> Match["Select Match"]
+
+GUI --> Schedule["Enter Tomorrow's Schedule"]
+
+Match --> Python["Python Controller"]
+
+Schedule --> Python
+
+Football["Football API"] --> Python
+
+Camera["Camera"] --> Python
+
+Python --> GPT["GPT Decision"]
+
+GPT --> HTTP["HTTP Request"]
+
+HTTP --> ESP32["ESP32"]
+```
