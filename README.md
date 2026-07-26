@@ -24,14 +24,14 @@ The Football Assistant Device integrates live football data, computer vision, GP
 flowchart LR
 
 A[Football API] --> D[Python Program]
-B[Camera] --> D
+B[Camera(Attention Detection)] --> D
 C[User GUI] --> D
 
 D --> E[GPT Decision]
 E --> F[HTTP Communication]
 F --> G[ESP32]
 
-M[Volume Knob] --> G
+M[rotary potentiometer(adjust Volume)] --> G
 
 G --> H[LCD]
 G --> I[RGB LED]
