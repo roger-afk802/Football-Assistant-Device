@@ -17,6 +17,36 @@ https://youtu.be/sUeonObxym8
 
 - **Interactive Match Selection**
   - Allows users to select matches and enter their schedule through a graphical interface.
+### Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+### Install Arduino Libraries
+
+Install the following libraries using the Arduino Library Manager:
+
+- LiquidCrystal_I2C
+- ESP32Servo
+- DFRobotDFPlayerMini
+## Usage
+
+1. Connect the ESP32 device and your computer to the same Wi-Fi network.
+
+2. Run the Python program.
+
+```bash
+python main.py
+```
+
+3. Select a football match and enter your schedule through the GUI.
+
+4. The system automatically:
+   - Retrieves live football match data every **2 minutes**.
+   - Evaluates the user's attention status every **5 minutes**.
+   - Requests an AI decision every **5 minutes** or immediately after significant match events.
+
+5. AI recommendations are displayed through the LCD, RGB LED, servo motor, and speaker.
 ## System Architecture
 
 The Football Assistant Device integrates live football data, computer vision, GPT decision-making, and ESP32 hardware to provide intelligent match-viewing assistance.
@@ -141,34 +171,5 @@ Python-->HTTP["HTTP Request"]
 
 HTTP --> ESP32["ESP32"]
 ```
-### Install Python Dependencies
 
-```bash
-pip install -r requirements.txt
-```
-### Install Arduino Libraries
-
-Install the following libraries using the Arduino Library Manager:
-
-- LiquidCrystal_I2C
-- ESP32Servo
-- DFRobotDFPlayerMini
-## Usage
-
-1. Connect the ESP32 device and your computer to the same Wi-Fi network.
-
-2. Run the Python program.
-
-```bash
-python main.py
-```
-
-3. Select a football match and enter your schedule through the GUI.
-
-4. The system automatically:
-   - Retrieves live football match data every **2 minutes**.
-   - Evaluates the user's attention status every **5 minutes**.
-   - Requests an AI decision every **5 minutes** or immediately after significant match events.
-
-5. AI recommendations are displayed through the LCD, RGB LED, servo motor, and speaker.
 
