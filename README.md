@@ -17,4 +17,28 @@ We built this project to assist people who needs to watch football stream a midn
 - **Interactive Match Selection**
   - Allows users to select matches and enter their schedule through a graphical interface.
 ## System Architecture
-The Football Assistant Device combines live football data, computer vision, GPT-based decision making, and ESP32 hardware to provide an intelligent match-viewing experience.
+
+The Football Assistant Device integrates live football data, computer vision, GPT decision-making, and ESP32 hardware to provide intelligent match-viewing assistance.
+
+```mermaid
+flowchart LR
+
+A[Football API] --> D[Python Program]
+B[Camera] --> D
+C[User GUI] --> D
+
+D --> E[GPT Decision]
+
+E --> F[HTTP Communication]
+
+F --> G[ESP32]
+
+G --> H[LCD]
+
+G --> I[RGB LED]
+
+G --> J[Servo Motor]
+
+G --> K[Speaker / DFPlayer]
+```
+
