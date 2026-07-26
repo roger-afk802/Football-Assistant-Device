@@ -90,7 +90,7 @@ The following hardware components are used in the Football Assistant Device.
 
 ![Wiring Diagram](images/wiring_diagram.png)
 
-> **Note:** All modules share the same 3.3V and GND from the ESP32 unless otherwise noted.
+
 
 ### Pin Assignment
 
@@ -98,15 +98,24 @@ The following hardware components are used in the Football Assistant Device.
 |-----------|--------|-----------|-------------|
 | LCD1602 I2C | SDA | GPIO21 | I2C Data |
 | LCD1602 I2C | SCL | GPIO22 | I2C Clock |
+| LCD1602 I2C | VCC | 3.3v | |
+| LCD1602 I2C | GND| GND | |
 | Servo Motor | Signal | GPIO25 | PWM Output |
+| Servo Motor | VCC | 5v |  |
+| Servo Motor | GND | GND| |
 | RGB LED (Common Anode) | Red | GPIO26 | LED Red Channel |
 | RGB LED (Common Anode) | Green | GPIO27 | LED Green Channel |
 | RGB LED (Common Anode) | Blue | GPIO33 | LED Blue Channel |
+| RGB LED (Common Anode) | CA | 5v | |
 | DFPlayer Mini | RX | GPIO17 | UART RX |
 | DFPlayer Mini | TX | GPIO16 | UART TX |
 | DFPlayer Mini | SPK+ | speaker | speaker |
 | DFPlayer Mini | SPK- | speaker | speaker|
+| DFPlayer Mini | VCC | 5v | |
+| DFPlayer Mini | GND | GND | |
 | Potentiometer | OUT | GPIO34 | Analog Input (ADC) |
+| Potentiometer | VCC |3.3v| |
+| Potentiometer | GND | GND | |
 ## Software
 
 The Football Assistant Device is built using the following software and libraries.
