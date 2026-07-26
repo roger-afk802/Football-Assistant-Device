@@ -20,7 +20,6 @@ https://youtu.be/sUeonObxym8
 ## System Architecture
 
 The Football Assistant Device integrates live football data, computer vision, GPT decision-making, and ESP32 hardware to provide intelligent match-viewing assistance.
-## System Architecture
 
 The Football Assistant Device integrates live football data, computer vision, GPT decision-making, and ESP32 hardware to provide intelligent match-viewing assistance.
 
