@@ -98,3 +98,8 @@ Python-->HTTP["HTTP Request"]
 
 HTTP --> ESP32["ESP32"]
 ```
+### Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
