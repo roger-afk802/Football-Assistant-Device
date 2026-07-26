@@ -103,3 +103,10 @@ HTTP --> ESP32["ESP32"]
 ```bash
 pip install -r requirements.txt
 ```
+### Install Arduino Libraries
+
+Install the following libraries using the Arduino Library Manager:
+
+- LiquidCrystal_I2C
+- ESP32Servo
+- DFRobotDFPlayerMini
