@@ -127,41 +127,48 @@ python main.py
    - Requests an AI decision every **5 minutes** or immediately after significant match events.
 
 5. AI recommendations are displayed through the LCD, RGB LED, servo motor, and speaker.
-                          +------------------+
-                          |      ESP32       |
-                          |                  |
-                          | GPIO21  GPIO22  |
-                          | GPIO25          |
-                          | GPIO26          |
-                          | GPIO27          |
-                          | GPIO33          |
-                          | GPIO16  GPIO17  |
-                          | GPIO34          |
-                          +------------------+
-                              │
-          ┌───────────────────┼────────────────────┐
-          │                   │                    │
-          │                   │                    │
-   +--------------+    +-------------+     +---------------+
-   | LCD1602 I2C  |    | Servo Motor |     | RGB LED       |
-   | SDA ← GPIO21 |    | SIG ← GPIO25|     | R ← GPIO26    |
-   | SCL ← GPIO22 |    | VCC → 3.3V  |     | G ← GPIO27    |
-   | VCC → 3.3V   |    | GND → GND   |     | B ← GPIO33    |
-   | GND → GND    |    +-------------+     | CA → 3.3V     |
-   +--------------+                        +---------------+
+##Wiring
+### LCD1602 I2C
 
-          │
-          │
-   +-------------------+        +----------------------+
-   | DFPlayer Mini     |        | Potentiometer        |
-   | RX ← GPIO17       |        | VCC → 3.3V           |
-   | TX → GPIO16       |        | GND → GND            |
-   | VCC → 3.3V        |        | OUT → GPIO34         |
-   | GND → GND         |        +----------------------+
-   | SPK+              |
-   | SPK-              |
-   +---------┬---------+
-             │
-        +---------+
-        | Speaker |
-        +---------+
+| LCD Pin | ESP32 Pin |
+|---------|-----------|
+| SDA | GPIO21 |
+| SCL | GPIO22 |
+| VCC | 3.3V |
+| GND | GND |
+
+### Servo Motor
+
+| Servo Pin | ESP32 Pin |
+|-----------|-----------|
+| Signal | GPIO25 |
+| VCC | 3.3V |
+| GND | GND |
+
+### RGB LED (Common Anode)
+
+| RGB Pin | ESP32 Pin |
+|---------|-----------|
+| Common Anode | 3.3V |
+| Red | GPIO26 |
+| Green | GPIO27 |
+| Blue | GPIO33 |
+
+### DFPlayer Mini
+
+| DFPlayer Pin | ESP32 Pin |
+|--------------|-----------|
+| RX | GPIO17 |
+| TX | GPIO16 |
+| VCC | 3.3V |
+| GND | GND |
+| SPK+ | Speaker + |
+| SPK- | Speaker - |
+
+### Potentiometer
+
+| Potentiometer Pin | ESP32 Pin |
+|-------------------|-----------|
+| VCC | 3.3V |
+| GND | GND |
+| OUT | GPIO34 |
