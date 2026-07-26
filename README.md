@@ -47,16 +47,16 @@ G --> K["DFPlayer Mini and Speaker"]
 
 The following hardware components are used in the Football Assistant Device.
 
-| Component | Model | Purpose |
-|-----------|-------|---------|
-| ESP32 | ESP32-WROOM-32 | Main microcontroller for communication and hardware control |
-| LCD Display | 1602 LCD with I2C | Displays match information and AI recommendations |
-| Camera | USB Camera | Captures the user's face for attention detection |
-| RGB LED | Common Anode RGB LED | Indicates system status through different colors |
-| Servo Motor | SG90 Micro Servo | Provides physical movement as a notification |
-| Audio Module | DFPlayer Mini | Plays notification sounds and football music |
-| Speaker | 8Ω Speaker | Outputs audio notifications |
-| Volume Knob | Rotary Potentiometer | Adjusts the speaker volume |
+| Component | Model | 
+|-----------|-------|
+| ESP32 | ESP32-WROOM-32 | 
+| LCD Display | 1602 LCD with I2C | 
+| Camera | USB Camera |
+| RGB LED | Common Anode RGB LED | 
+| Servo Motor | SG90 Micro Servo |
+| Audio Module | DFPlayer Mini | 
+| Speaker | 8Ω Speaker | 
+| Volume Knob | Rotary Potentiometer | 
 ## Software
 
 The Football Assistant Device is built using the following software and libraries.
