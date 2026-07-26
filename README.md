@@ -28,17 +28,14 @@ B[Camera] --> D
 C[User GUI] --> D
 
 D --> E[GPT Decision]
-
 E --> F[HTTP Communication]
-
 F --> G[ESP32]
 
+M[Volume Knob] --> G
+
 G --> H[LCD]
-
 G --> I[RGB LED]
-
 G --> J[Servo Motor]
-
 G --> K[Speaker / DFPlayer]
 ```
 
