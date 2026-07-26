@@ -93,7 +93,8 @@ Camera["Camera"] --> Python
 
 Python --> GPT["GPT Decision"]
 
-GPT --> HTTP["HTTP Request"]
+GPT --> Python
+Python-->HTTP["HTTP Request"]
 
 HTTP --> ESP32["ESP32"]
 ```
