@@ -56,6 +56,50 @@ The following hardware components are used in the Football Assistant Device.
 | Audio Module | DFPlayer Mini | 
 | Speaker | 8Ω Speaker | 
 | Volume Knob | Rotary Potentiometer | 
+### LCD1602 I2C
+
+| LCD Pin | ESP32 Pin |
+|---------|-----------|
+| SDA | GPIO21 |
+| SCL | GPIO22 |
+| VCC | 3.3V |
+| GND | GND |
+
+### Servo Motor
+
+| Servo Pin | ESP32 Pin |
+|-----------|-----------|
+| Signal | GPIO25 |
+| VCC | 3.3V |
+| GND | GND |
+
+### RGB LED (Common Anode)
+
+| RGB Pin | ESP32 Pin |
+|---------|-----------|
+| Common Anode | 3.3V |
+| Red | GPIO26 |
+| Green | GPIO27 |
+| Blue | GPIO33 |
+
+### DFPlayer Mini
+
+| DFPlayer Pin | ESP32 Pin |
+|--------------|-----------|
+| RX | GPIO17 |
+| TX | GPIO16 |
+| VCC | 3.3V |
+| GND | GND |
+| SPK+ | Speaker + |
+| SPK- | Speaker - |
+
+### Potentiometer
+
+| Potentiometer Pin | ESP32 Pin |
+|-------------------|-----------|
+| VCC | 3.3V |
+| GND | GND |
+| OUT | GPIO34 |
 ## Software
 
 The Football Assistant Device is built using the following software and libraries.
@@ -127,48 +171,4 @@ python main.py
    - Requests an AI decision every **5 minutes** or immediately after significant match events.
 
 5. AI recommendations are displayed through the LCD, RGB LED, servo motor, and speaker.
-##Wiring
-### LCD1602 I2C
 
-| LCD Pin | ESP32 Pin |
-|---------|-----------|
-| SDA | GPIO21 |
-| SCL | GPIO22 |
-| VCC | 3.3V |
-| GND | GND |
-
-### Servo Motor
-
-| Servo Pin | ESP32 Pin |
-|-----------|-----------|
-| Signal | GPIO25 |
-| VCC | 3.3V |
-| GND | GND |
-
-### RGB LED (Common Anode)
-
-| RGB Pin | ESP32 Pin |
-|---------|-----------|
-| Common Anode | 3.3V |
-| Red | GPIO26 |
-| Green | GPIO27 |
-| Blue | GPIO33 |
-
-### DFPlayer Mini
-
-| DFPlayer Pin | ESP32 Pin |
-|--------------|-----------|
-| RX | GPIO17 |
-| TX | GPIO16 |
-| VCC | 3.3V |
-| GND | GND |
-| SPK+ | Speaker + |
-| SPK- | Speaker - |
-
-### Potentiometer
-
-| Potentiometer Pin | ESP32 Pin |
-|-------------------|-----------|
-| VCC | 3.3V |
-| GND | GND |
-| OUT | GPIO34 |
