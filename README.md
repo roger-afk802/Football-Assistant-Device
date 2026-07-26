@@ -86,50 +86,25 @@ The following hardware components are used in the Football Assistant Device.
 | Audio Module | DFPlayer Mini | 
 | Speaker | 8Ω Speaker | 
 | Volume Knob | Rotary Potentiometer | 
-### LCD1602 I2C
+## Wiring
 
-| LCD Pin | ESP32 Pin |
-|---------|-----------|
-| SDA | GPIO21 |
-| SCL | GPIO22 |
-| VCC | 3.3V |
-| GND | GND |
+![Wiring Diagram](images/wiring_diagram.png)
 
-### Servo Motor
+> **Note:** All modules share the same 3.3V and GND from the ESP32 unless otherwise noted.
 
-| Servo Pin | ESP32 Pin |
-|-----------|-----------|
-| Signal | GPIO25 |
-| VCC | 3.3V |
-| GND | GND |
+### Pin Assignment
 
-### RGB LED (Common Anode)
-
-| RGB Pin | ESP32 Pin |
-|---------|-----------|
-| Common Anode | 3.3V |
-| Red | GPIO26 |
-| Green | GPIO27 |
-| Blue | GPIO33 |
-
-### DFPlayer Mini
-
-| DFPlayer Pin | ESP32 Pin |
-|--------------|-----------|
-| RX | GPIO17 |
-| TX | GPIO16 |
-| VCC | 3.3V |
-| GND | GND |
-| SPK+ | Speaker + |
-| SPK- | Speaker - |
-
-### Potentiometer
-
-| Potentiometer Pin | ESP32 Pin |
-|-------------------|-----------|
-| VCC | 3.3V |
-| GND | GND |
-| OUT | GPIO34 |
+| Component | Signal | ESP32 Pin | Description |
+|-----------|--------|-----------|-------------|
+| LCD1602 I2C | SDA | GPIO21 | I2C Data |
+| LCD1602 I2C | SCL | GPIO22 | I2C Clock |
+| Servo Motor | Signal | GPIO25 | PWM Output |
+| RGB LED (Common Anode) | Red | GPIO26 | LED Red Channel |
+| RGB LED (Common Anode) | Green | GPIO27 | LED Green Channel |
+| RGB LED (Common Anode) | Blue | GPIO33 | LED Blue Channel |
+| DFPlayer Mini | RX | GPIO17 | UART RX |
+| DFPlayer Mini | TX | GPIO16 | UART TX |
+| Potentiometer | OUT | GPIO34 | Analog Input (ADC) |
 ## Software
 
 The Football Assistant Device is built using the following software and libraries.
