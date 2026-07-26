@@ -31,7 +31,8 @@ B["Camera (Attention Detection)"] --> D
 C["User GUI"] --> D
 
 D --> E["GPT Decision"]
-E --> F["HTTP Communication"]
+E-->D["Python Program"]
+D --> F["HTTP Communication"]
 F --> G["ESP32"]
 
 M["Rotary Potentiometer (Volume Control)"] --> G
