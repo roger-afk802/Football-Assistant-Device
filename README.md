@@ -64,8 +64,7 @@ The Football Assistant Device is built using the following software and librarie
 | Software / Library | Purpose |
 |--------------------|---------|
 | Python | Main application that coordinates the entire system |
-| OpenCV | Captures and processes camera images |
-| MediaPipe | Detects facial landmarks and estimates user attention |
+| OpenCV | Captures and processes camera images and estimates user attention|
 | Tkinter | Provides the graphical user interface for user input |
 | OpenAI GPT API | Generates intelligent viewing recommendations |
 | Football API | Retrieves real-time football match data and events |
