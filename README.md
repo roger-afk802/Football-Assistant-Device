@@ -104,6 +104,8 @@ The following hardware components are used in the Football Assistant Device.
 | RGB LED (Common Anode) | Blue | GPIO33 | LED Blue Channel |
 | DFPlayer Mini | RX | GPIO17 | UART RX |
 | DFPlayer Mini | TX | GPIO16 | UART TX |
+| DFPlayer Mini | SPK+ | speaker | speaker |
+| DFPlayer Mini | SPK- | speaker | speaker|
 | Potentiometer | OUT | GPIO34 | Analog Input (ADC) |
 ## Software
 
