@@ -86,12 +86,6 @@ The following hardware components are used in the Football Assistant Device.
 | Audio Module | DFPlayer Mini | 
 | Speaker | 8Ω Speaker | 
 | Volume Knob | Rotary Potentiometer | 
-## Wiring
-
-![Wiring Diagram](images/wiring_diagram.png)
-
-
-
 ### Pin Assignment
 
 | Component | Signal | ESP32 Pin | Description |
