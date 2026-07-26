@@ -19,23 +19,26 @@ We built this project to assist people who needs to watch football stream a midn
 ## System Architecture
 
 The Football Assistant Device integrates live football data, computer vision, GPT decision-making, and ESP32 hardware to provide intelligent match-viewing assistance.
+## System Architecture
+
+The Football Assistant Device integrates live football data, computer vision, GPT decision-making, and ESP32 hardware to provide intelligent match-viewing assistance.
 
 ```mermaid
 flowchart LR
 
-A[Football API] --> D[Python Program]
-B[Camera(Attention Detection)] --> D
-C[User GUI] --> D
+A["Football API"] --> D["Python Program"]
+B["Camera (Attention Detection)"] --> D
+C["User GUI"] --> D
 
-D --> E[GPT Decision]
-E --> F[HTTP Communication]
-F --> G[ESP32]
+D --> E["GPT Decision"]
+E --> F["HTTP Communication"]
+F --> G["ESP32"]
 
-M[rotary potentiometer(adjust Volume)] --> G
+M["Rotary Potentiometer (Volume Control)"] --> G
 
-G --> H[LCD]
-G --> I[RGB LED]
-G --> J[Servo Motor]
-G --> K[Speaker / DFPlayer]
+G --> H["LCD"]
+G --> I["RGB LED"]
+G --> J["Servo Motor"]
+G --> K["DFPlayer Mini and Speaker"]
 ```
 
