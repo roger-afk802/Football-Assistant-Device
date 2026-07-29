@@ -137,8 +137,7 @@ def get_matches_by_date(match_date=None):
     """
     抓指定比賽日所有可存取的比賽。
 
-    若 match_date 沒傳入，
-    自動套用凌晨 6 點切日規則。
+
     """
 
     if match_date is None:
@@ -331,7 +330,7 @@ def watch_match_live(
     定期更新指定比賽。
 
     interval_seconds：
-    每隔幾秒查一次，免費方案建議至少 60 秒。
+
 
     max_updates：
     測試時限制查詢次數。
@@ -448,7 +447,7 @@ if __name__ == "__main__":
     print_match(match)
 
     if match is not None:
-        # 先測 3 次，每 60 秒一次。
+
         # 成功後可把 max_updates 改成 None。
         watch_match_live(
             fixture_id=match["fixture_id"],
